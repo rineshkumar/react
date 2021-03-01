@@ -1,7 +1,10 @@
-const Welcome: React.FC = (): JSX.Element => {
+interface WelcomeProps{
+    name : string
+}
+const Welcome: React.FC<WelcomeProps> = ({name}): JSX.Element => {
     return (
         <div>
-            Welcome !!
+            Welcome {name}!!
         </div>
     )
 }
