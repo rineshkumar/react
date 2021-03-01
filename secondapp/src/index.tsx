@@ -4,10 +4,27 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import UserList from './components/UserList';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+  <Switch>
+    <Route 
+      exact 
+      path="/" 
+      render={()=> <App />} 
+      />
+      <Route
+      exact
+      path="/userlist"
+      render={(props)=><UserList {...props}/>}
+      />
+  </Switch>
+  </BrowserRouter>,
+  // <React.StrictMode>
+  
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 

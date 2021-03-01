@@ -1,3 +1,4 @@
+https://medium.com/@richardprasad42/typescript-with-react-crash-course-7a81013a8f64
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
