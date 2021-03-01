@@ -4,6 +4,9 @@ interface WelcomeProps{
 }
 const Welcome: React.FC<WelcomeProps> = ({name}): JSX.Element => {
     const [time, setTime] = useState<Date>(() => new Date(Date.now()));
+    setInterval(() => {
+        setTime(new Date(Date.now()));
+      }, 1000);
     return (
         <div>
             Welcome {name} !! {time.toUTCString()}
