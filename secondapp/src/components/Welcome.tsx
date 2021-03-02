@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 interface WelcomeProps{
     name : string
 }
@@ -14,6 +14,15 @@ const Welcome: React.FC<WelcomeProps> = ({name}): JSX.Element => {
           const {value} = e.target;
             setMessage(value);
       }
+
+      useEffect(()=>{
+       const timer = setInterval(()=>{
+           setTime(new Date(Date.now()));
+       },1000);
+       return () => {
+           clearInterval(timer)
+        };
+      },[name]);
     return (
         <div>
             Welcome {name} !! {time.toUTCString()}

@@ -20,7 +20,7 @@ function App() {
           Learn React
         </a>
         <Welcome name="Rinesh"/>
-        <UserList/>
+    
       </header>
     </div>
   );
