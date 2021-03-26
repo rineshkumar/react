@@ -6,7 +6,7 @@ const mapDispatchToProps = (dispatch) => {
         addArticle: (article) => dispatch(addArticle(article))
     }
 }
-class ConnectedForm extends Component {
+class NewArticleConnectedForm extends Component {
     constructor(props) {
         super(props);
 
@@ -46,5 +46,5 @@ class ConnectedForm extends Component {
     }
 }
 
-const Form = connect(null, mapDispatchToProps)(ConnectedForm);
-export default Form;
+const NewArticleForm = connect(null, mapDispatchToProps)(NewArticleConnectedForm);
+export default NewArticleForm;
