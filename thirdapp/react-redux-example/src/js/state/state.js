@@ -1,4 +1,5 @@
 const initialState = {
-    articles : []
+    articles : [],
+    remoteArticles : []
 }
 export {initialState}
