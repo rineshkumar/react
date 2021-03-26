@@ -1,6 +1,6 @@
 import { ADD_ARTICLE } from "./actiontypes"
-function addArticle(payload)  {
-    return { type: addArticle, payload }
+const addArticle = (payload) => {
+    return { type: ADD_ARTICLE, payload }
 }
 
 export { addArticle }
