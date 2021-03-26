@@ -2,7 +2,6 @@ import { Component } from "react";
 import { connect } from "react-redux";
 import { getData } from "../actions/actions"
 const mapStateToProps = (reduxState) => {
-    console.log("Mapping state to props ")
     return {
         remoteArticles: reduxState.remoteArticles.slice(0, 10)
     }
