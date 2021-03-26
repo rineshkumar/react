@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import addArticle from "../actions/actions"
+import {addArticle} from "../actions/actions"
+import {connect} from "react-redux"
 const mapDispatchToProps = (dispatch) => {
     return {
         // Mappping a props function call to a store dispatch action call 
@@ -31,6 +32,7 @@ class NewArticleConnectedForm extends Component {
         this.setState({ title: "" });
     }
     render() {
+        const {title} = this.state;
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
