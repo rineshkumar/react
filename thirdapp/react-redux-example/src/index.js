@@ -6,10 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import browsertest from "./js/browsertest"
 import { Provider } from "react-redux"
 import store from "./js/store/store"
+import ArticleManagement from "./js/components/ArticleManagement"
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <App />
+      <ArticleManagement />
     </React.StrictMode>
   </Provider>,
   document.getElementById('root')

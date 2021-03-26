@@ -15,3 +15,5 @@ const ArticleManagement = () => {
     </>
 
 }
+
+export default ArticleManagement;
