@@ -7,10 +7,12 @@ import browsertest from "./js/browsertest"
 import { Provider } from "react-redux"
 import store from "./js/store/store"
 import ArticleManagement from "./js/components/ArticleManagement"
+import RemotePosts from './js/components/RemotePosts';
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <ArticleManagement />
+      <RemotePosts/>
     </React.StrictMode>
   </Provider>,
   document.getElementById('root')
