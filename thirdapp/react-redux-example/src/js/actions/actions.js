@@ -1,6 +1,6 @@
-import {ADD_ARTICLE} from "./actiontypes"
-const addArticle = (payload) => {
-    {type: addArticle, payload }
+import { ADD_ARTICLE } from "./actiontypes"
+function addArticle(payload)  {
+    return { type: addArticle, payload }
 }
 
-export {addArticle}
+export { addArticle }
