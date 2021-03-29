@@ -13,7 +13,7 @@ class ConnectedRemotePosts extends Component {
     }
     componentDidMount() {
 
-        this.props.getDataUsingSaga();
+        this.props.getDataUsingSaga("https://api.valentinog.com/api/link/");
     }
 
     render() {
