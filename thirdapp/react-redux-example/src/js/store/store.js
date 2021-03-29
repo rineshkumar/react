@@ -9,7 +9,13 @@ const storeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
     rootReducer,
-    storeEnhancers(applyMiddleware(forbiddenWordsMiddleware, sagaMiddleware, thunk))
+    storeEnhancers(
+        applyMiddleware(
+            forbiddenWordsMiddleware, 
+            sagaMiddleware, 
+            thunk
+        )
+    )
 );
 sagaMiddleware.run(watcherSaga);
 //https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910

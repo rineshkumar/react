@@ -11,8 +11,8 @@ const getData = (dispatch, getState) => {
         });
 }
 
-const getDataUsingSaga = () => {
-    return { type: DATA_REQUESTED }
+const getDataUsingSaga = (url) => {
+    return { type: DATA_REQUESTED, payload: { url } }
 }
 
 export { addArticle, getData, getDataUsingSaga }
