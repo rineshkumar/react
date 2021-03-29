@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { useState } from "react"
 
-const ComponentForTestingHooks = (props) => {
+const ComponentForTestingUseStateHook = (props) => {
     const [state, setState] = useState("Initial State");
     const changeState = () => {
         setState("Initial State Changed");
@@ -22,4 +22,4 @@ const ComponentForTestingHooks = (props) => {
         </div>
     )
 }
-export default ComponentForTestingHooks
+export default ComponentForTestingUseStateHook

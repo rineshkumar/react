@@ -1,12 +1,12 @@
 import { cleanup, fireEvent, render } from "@testing-library/react"
-import ComponentForTestingHooks from "./ComponentForTestingHooks"
+import ComponentForTestingUseStateHook from "./ComponentForTestingUseStateHook"
 import ParentComponent from "./ParentComponent";
 
 
 afterEach(cleanup)
 
 it("Testing hooks ", () => {
-    const { getByText } = render(<ComponentForTestingHooks />);
+    const { getByText } = render(<ComponentForTestingUseStateHook />);
     expect(getByText(/Initial/i).textContent).toBe("Initial State")
     fireEvent.click(getByText("State Change Button"))
     expect(getByText(/Initial/i).textContent).toBe("Initial State Changed")
@@ -15,7 +15,7 @@ it("Testing hooks ", () => {
 it("Testing props ", () => {
     const { getByText } = render(
         <ParentComponent>
-            <ComponentForTestingHooks />
+            <ComponentForTestingUseStateHook />
         </ParentComponent>);
     expect(getByText(/Rinesh/i).textContent).toBe("Rinesh")
     fireEvent.click(getByText("Change Name"));

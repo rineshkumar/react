@@ -1,5 +1,5 @@
 import { useState } from "react"
-import ComponentForTestingHooks from "./ComponentForTestingHooks"
+import ComponentForTestingUseStateHook from "./ComponentForTestingUseStateHook"
 
 const ParentComponent = () => {
     const [userName, setUserName] = useState("Rinesh")
@@ -8,7 +8,7 @@ const ParentComponent = () => {
     }
     return (
         <div>
-            <ComponentForTestingHooks name={userName} changeName={changeName} />
+            <ComponentForTestingUseStateHook name={userName} changeName={changeName} />
         </div>
     )
 }

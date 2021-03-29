@@ -1,6 +1,6 @@
 import { cleanup, fireEvent, render } from "@testing-library/react"
-import { SUCCESS } from "../TestArtifacts/test-actions"
-import { reducer1, initialState } from "../TestArtifacts/test-reducer"
+import { SUCCESS } from "./TestArtifacts/test-actions"
+import { reducer1, initialState } from "./TestArtifacts/test-reducer"
 import { ComponentForTestingReducerHook } from "./ComponentForTestingReducerHook"
 
 

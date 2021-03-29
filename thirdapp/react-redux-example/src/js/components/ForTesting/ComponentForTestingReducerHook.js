@@ -1,6 +1,6 @@
 import { useReducer } from "react"
-import { FAILURE, SUCCESS } from "../TestArtifacts/test-actions";
-import { initialState, reducer1 } from "../TestArtifacts/test-reducer"
+import { FAILURE, SUCCESS } from "./TestArtifacts/test-actions";
+import { initialState, reducer1 } from "./TestArtifacts/test-reducer"
 const ComponentForTestingReducerHook = () => {
     const [state, dispatch] = useReducer(reducer1, initialState);
     const dispatchSuccessAction = () => {
