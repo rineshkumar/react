@@ -9,7 +9,7 @@ it("Testing hooks ", () => {
     const { getByText } = render(<ComponentForTestingHooks />);
     expect(getByText(/Initial/i).textContent).toBe("Initial State")
     fireEvent.click(getByText("State Change Button"))
-    expect(getByText(/Initial/i).t7extContent).toBe("Initial State Changed")
+    expect(getByText(/Initial/i).textContent).toBe("Initial State Changed")
 })
 
 it("Testing props ", () => {
