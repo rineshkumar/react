@@ -1,23 +1,19 @@
 import { Component } from "react";
 import { connect } from "react-redux";
-import { getData } from "../actions/actions"
+import { getDataUsingSaga } from "../actions/actions"
 const mapStateToProps = (reduxState) => {
     return {
         remoteArticles: reduxState.remoteArticles.slice(0, 10)
     }
 }
-const mapDispatchToProps = (dispatch) => {
-    return {
-        getRemoteArticles: () => dispatch(getData)
-    }
-}
+
 class ConnectedRemotePosts extends Component {
     constructor(props) {
         super(props)
     }
     componentDidMount() {
-        
-        this.props.getRemoteArticles();
+
+        this.props.getDataUsingSaga();
     }
 
     render() {
@@ -29,7 +25,7 @@ class ConnectedRemotePosts extends Component {
         );
     }
 }
-const RemotePosts = connect(mapStateToProps,mapDispatchToProps)(ConnectedRemotePosts);
+const RemotePosts = connect(mapStateToProps, { getDataUsingSaga })(ConnectedRemotePosts);
 export default RemotePosts;
 
 

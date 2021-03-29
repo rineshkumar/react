@@ -1,8 +1,10 @@
 import { initialState } from "../state/state"
-import { ADD_ARTICLE, DATA_LOADED } from "../actions/actiontypes"
+import { ADD_ARTICLE, DATA_LOADED ,API_ERRORED} from "../actions/actiontypes"
 import { addArticle } from "../actions/actions"
 
+
 const rootReducer = (state = initialState, action) => {
+    
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
     if (action.type === ADD_ARTICLE) {
         //using push ==> state is mutable ==> Wrong 
@@ -19,6 +21,9 @@ const rootReducer = (state = initialState, action) => {
             {
                 remoteArticles: state.remoteArticles.concat(action.payload)
             })
+    }
+    if(action.type === API_ERRORED){
+        return state;   
     }
     return state;
 }
